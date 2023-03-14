@@ -25,20 +25,23 @@ export default function TheHeader() {
 
   return (
     <header>
-      <div className="flex items-center justify-between px-x-sm tablet:px-x-md laptop:px-x-lg py-y-sm tablet:py-y-md laptop:py-y-lg h-fit">
-        <MenuButton isOpen={showSidebar} onClick={onMenuSidebarClick} />
-        <AppLogo />
-        <nav className="flex gap-[30px] items-center">
-          <div className="gap-5 hidden tablet:flex">
-            <NavLink href="/#about">About</NavLink>
-            <NavLink href="/#techbros_techsis">Tech Bro</NavLink>
-          </div>
+      {/* <div className="flex items-center justify-between px-x-sm tablet:px-x-md laptop:px-x-lg py-y-sm tablet:py-y-md laptop:py-y-lg h-fit"> */}
+      <div className="fixed sm:relative z-20 w-full">
+        <div className="flex items-center justify-between px-x-sm tablet:px-x-md laptop:px-x-lg py-y-sm tablet:py-y-md laptop:py-y-lg h-fit">
+          <MenuButton isOpen={showSidebar} onClick={onMenuSidebarClick} />
+          <AppLogo />
+          <nav className="flex gap-[30px] items-center">
+            <div className="gap-5 hidden tablet:flex">
+              <NavLink href="/#about">About</NavLink>
+              <NavLink href="/#techbros_techsis">Tech Bro</NavLink>
+            </div>
 
-          <DarkModeSwitcher
-            isDark={isDarkMode}
-            onSwitch={() => setDarkMode((prevValue) => !prevValue)}
-          />
-        </nav>
+            <DarkModeSwitcher
+              isDark={isDarkMode}
+              onSwitch={() => setDarkMode((prevValue) => !prevValue)}
+            />
+          </nav>
+        </div>
 
         <Sidebar isOpen={showSidebar} />
       </div>
