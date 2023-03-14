@@ -1,0 +1,23 @@
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import AppLogo from "../app-logo";
+
+export default function TheFooter() {
+  return (
+    <footer className="bg-[#e4e4e4] dark:bg-primary-100 bg-scroll">
+      <div className="flex items-center justify-between px-x-sm tablet:px-x-md laptop:px-x-lg py-y-sm tablet:py-y-md laptop:py-y-lg h-fit">
+        <AppLogo />
+        <div className="flex gap-2">
+          <span>&copy; 2023</span>
+          <a
+            href="https://github.com/JCalmCrasher/techbropedia"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FontAwesomeIcon icon={faGithub} />
+          </a>
+        </div>
+      </div>
+    </footer>
+  );
+}
