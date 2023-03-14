@@ -10,7 +10,7 @@ export default function TheFooter() {
         <div className="flex gap-2">
           <span>&copy; 2023</span>
           <a
-            href="https://github.com/JCalmCrasher/techbropedia"
+            href="https://github.com/JCalmCrasher/techbropedia/blob/main/CONTRIBUTING.md"
             target="_blank"
             rel="noreferrer"
           >
