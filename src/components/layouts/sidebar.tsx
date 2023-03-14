@@ -29,8 +29,8 @@ export default function Sidebar({ isOpen = false }: Props) {
             `}
           >
             <nav className="flex flex-col gap-5 mt-20">
-              <NavLink href="/about">About</NavLink>
-              <NavLink href="/tech-bro">Tech Bro</NavLink>
+              <NavLink href="/#about">About</NavLink>
+              <NavLink href="/#techbros_techsis">Tech Bro</NavLink>
             </nav>
           </div>,
           document.body
