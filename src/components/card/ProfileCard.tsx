@@ -10,6 +10,7 @@ import { faGlobe, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { HeartIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import { MouseEvent } from "react";
 
 interface ProfileCardProps {
   name: string;
@@ -35,9 +36,15 @@ export function ProfileCard({
   role = "Software Engineer",
   onInfo
 }: ProfileCardProps) {
+  const handleProfileClick = (
+    e: MouseEvent<HTMLAnchorElement, globalThis.MouseEvent>
+  ) => {
+    e.preventDefault();
+  };
+
   return (
-    <Link href={`#${slugify(name)}`}>
-      <div className="border-2 border-primary-main dark:border-secondary-100 p-4 rounded-lg dark:bg-primary-100 transition-colors duration-300 hover:border-secondary-100 dark:hover:border-secondary-main">
+    <Link href={`#${slugify(name)}`} onClick={handleProfileClick}>
+      <div className="border-2 border-primary-main dark:border-secondary-100 p-4 rounded-lg dark:bg-primary-100 transition-colors duration-300 hover:border-secondary-100 dark:hover:border-secondary-main h-[full] sm:h-[430px]">
         <div className="flex flex-col tablet:flex-row justify-between items-start">
           <div className="w-[144px] h-[126px]">
             <Image
