@@ -251,8 +251,8 @@ export default function Home(props: { contents: any }) {
                                   "w-full rounded-lg py-3 text-body-sm md:text-body-lg",
                                   "ring-aqua ring-opacity-60 ring-offset-1 focus:outline-none focus:ring-1",
                                   selected
-                                    ? "bg-secondary-200 shadow"
-                                    : "hover:bg-white/[0.12] hover:text-white"
+                                    ? "bg-secondary-200 shadow text-white"
+                                    : "hover:text-secondary-200"
                                 )
                               }
                             >
