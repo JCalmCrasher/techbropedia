@@ -23,9 +23,6 @@ dependencies:
   '@heroicons/react':
     specifier: ^2.0.13
     version: 2.0.13(react@18.2.0)
-  '@next/font':
-    specifier: 13.1.4
-    version: 13.1.4
   '@types/node':
     specifier: 18.11.18
     version: 18.11.18
@@ -210,10 +207,6 @@ packages:
     dependencies:
       glob: 7.1.7
     dev: true
-
-  /@next/font@13.1.4:
-    resolution: {integrity: sha512-NfqQPAIFJhssdaZEsP0MADZKN+tc040jOkNKVlDZHtVjJWBJSgbe8UHg3w0S6YuQr7PHc0ACbFeVCBQeG4MEvg==}
-    dev: false
 
   /@next/swc-darwin-arm64@13.4.12:
     resolution: {integrity: sha512-deUrbCXTMZ6ZhbOoloqecnUeNpUOupi8SE2tx4jPfNS9uyUR9zK4iXBvH65opVcA/9F5I/p8vDXSYbUlbmBjZg==}
