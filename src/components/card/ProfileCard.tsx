@@ -48,7 +48,7 @@ export function ProfileCard({
         <div className="flex flex-col tablet:flex-row justify-between items-start">
           <div className="w-[144px] h-[126px]">
             <Image
-              src={image || ""}
+              src={image || "/profile-fallback.png"}
               width={144}
               height={126}
               alt={name}
