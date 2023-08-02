@@ -1,37 +1,37 @@
 @tailwind base;
-
-@layer base {
-  button {
-    @apply text-[15px] leading-[18.3px] tracking-[1.25px] uppercase;
-  }
-}
-
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+ button {
+  @apply text-[15px] leading-[18.3px] tracking-[1.25px] uppercase;
+ }
+}
+
 @media screen and (min-device-width: 768px) {
-  .underline-animation {
-    @apply relative no-underline;
-    color: inherit;
-  }
-  .underline-animation::before {
-    @apply absolute bottom-0 right-0 w-0 h-5 transition-all duration-300 ease-in-out opacity-[0.5] bg-[#24c263];
-    content: "";
-  }
-  .underline-animation:hover::before {
-    @apply w-[18px] transition-all duration-300 ease-in-out;
-  }
+ .underline-animation {
+  @apply relative no-underline;
+  color: inherit;
+ }
+ .underline-animation::before {
+  @apply absolute bottom-0 right-0 w-0 h-5 transition-all duration-300 ease-in-out opacity-[0.5] bg-[#24c263];
+  content: "";
+ }
+ .underline-animation:hover::before {
+  @apply w-[18px] transition-all duration-300 ease-in-out;
+ }
 }
 
 .fh {
-  @apply tablet:min-h-screen h-full;
+ @apply tablet:min-h-screen h-full;
 }
 
 body {
-  @apply scroll-smooth;
+ font-family: var(--font-sans);
+ @apply scroll-smooth;
 }
 
 .profile-image {
-  object-fit: cover;
-  height: 140px;
+ object-fit: cover;
+ height: 140px;
 }
