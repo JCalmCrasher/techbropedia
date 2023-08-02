@@ -1,5 +1,13 @@
+import { montserratFont } from "@/fonts/fonts";
+import { classNames as cn } from "@/lib/helpers";
 import { Metadata } from "next";
 import { ReactNode } from "react";
+import "@/styles/global.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import PageLayout from "@/components/layouts/page-layout";
+
+config.autoAddCss = false;
 
 export const metadata: Metadata = {
  title: "Techbropedia",
@@ -15,8 +23,13 @@ export default function RootLayout({
 }) {
  return (
   <html lang="en">
-   <body className="bg-aqua dark:bg-primary-main text-primary-100 dark:text-white transition-colors duration-300">
-    {children}
+   <body
+    className={cn(
+     `bg-aqua dark:bg-primary-main text-primary-100 dark:text-white transition-colors duration-300`,
+     montserratFont.variable
+    )}
+   >
+    <PageLayout>{children}</PageLayout>
    </body>
   </html>
  );
