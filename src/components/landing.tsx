@@ -19,6 +19,8 @@ import { Metadata } from "next";
 type UserProfile = {
  content: string | undefined;
  data: {
+  brief: string;
+  funStuff: string;
   website: string | undefined;
   name: string;
   linkedin: string | undefined;
@@ -35,11 +37,15 @@ export const metadata: Metadata = {
  description: "Wikipedia for Techbros & Techsis in Nigeria"
 };
 
+const workInProgress = "Working on this section, check back for updates!";
+
 export default function Landing(props: { contents: any }) {
  const { contents: profiles } = props;
  const [selectedProfile, setSelectedProfile] = useState<UserProfile>({
   content: "",
   data: {
+   brief: "",
+   funStuff: "",
    name: "",
    linkedin: "",
    twitter: "",
@@ -72,7 +78,7 @@ export default function Landing(props: { contents: any }) {
   setIsOpen(true);
  }
 
- const tabs = ["Background", "Works", "Hobbies", "Gallery"];
+ const tabs = ["Background", "Works", "Fun Stuff", "Gallery"];
 
  const aboutSectionRef = useRef<HTMLElement | null>(null);
 
@@ -182,8 +188,8 @@ export default function Landing(props: { contents: any }) {
         <ProfileCard
          key={key()}
          name={profile.data.name}
-         role={profile.data.occupation[0]}
-         about={profile.content}
+         role={profile.data?.occupation[0] || "N/A"}
+         about={profile.data.brief || "N/A"}
          linkedin={profile.data.linkedin}
          twitter={profile.data.twitter}
          website={profile.data.website}
@@ -262,13 +268,19 @@ export default function Landing(props: { contents: any }) {
              ))}
             </Tab.List>
             <Tab.Panels>
-             <Tab.Panel className="panel">{selectedProfile.content}</Tab.Panel>
-             <Tab.Panel>
-              Working on this section, check back for updates!
-             </Tab.Panel>
-             <Tab.Panel>
-              Working on this section, check back for updates!
-             </Tab.Panel>
+             {/* <Tab.Panel className="panel">{selectedProfile.content}</Tab.Panel> */}
+             <Tab.Panel
+              className="panel leading-7"
+              dangerouslySetInnerHTML={{
+               __html: selectedProfile?.content || workInProgress
+              }}
+             />
+             <Tab.Panel>{workInProgress}</Tab.Panel>
+             <Tab.Panel
+              dangerouslySetInnerHTML={{
+               __html: selectedProfile?.data.funStuff || workInProgress
+              }}
+             />
              <Tab.Panel>
               Working on this section, check back for updates!
              </Tab.Panel>
