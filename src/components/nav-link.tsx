@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ReactNode } from "react";
 
 interface Props {
@@ -6,11 +7,11 @@ interface Props {
 }
 export default function NavLink({ href = "", children }: Props) {
   return (
-    <a
-      className="underline-animation text-primary-main dark:text-white text-[20px] leading-6 tracking-[0px] font-light"
+    <Link
+      className="underline-animation text-primary-main dark:text-white leading-6 tracking-[0px] font-light"
       href={href}
     >
       {children}
-    </a>
+    </Link>
   );
 }
