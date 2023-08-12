@@ -7,7 +7,7 @@ If you are interested in contributing to Techbropedia, please follow these steps
 
     Check out the existing Techbro/Techsis stories on the website to get an idea of the format and style of the articles. We use the techbro.md format for all articles, which you can find in the contributing-guidelines directory.
 
-    Choose a Techbro or Techsis whose story you want to tell. We encourage you to highlight individuals who have made substantial contributions to the tech community in Nigeria, but all stories are welcome.
+    Choose a Techbro or Techsis whose story you want to tell (_every stories will be reviewed_). We encourage you to highlight individuals who have made substantial contributions to the tech community in Nigeria, but all stories are welcome.
 
     Write a markdown file in the techbro.md format that tells the story of your chosen individual. Be sure to include details about their background, education, early career choices, current projects, and contributions to the tech community. Feel free to include quotes, anecdotes, or other details that help to convey the individual's story and experiences.
 
