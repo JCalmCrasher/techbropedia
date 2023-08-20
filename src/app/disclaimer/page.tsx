@@ -13,7 +13,7 @@ const DisclaimerPage = () => {
     </p>
     <p>
      The contents presented on Techbropedia are <Link href='/'>sourced</Link> from various individuals and are intended solely for the purpose of documenting personal journeys, achievements, and insights within the technology field. These stories are
-     meant to provide inspiration, offer different perspectives, and celebrate
+     meant to provide inspiration, offer different perspectives, and highlight
      the uniqueness of each individual&apos;s path.
     </p>
     <p>
