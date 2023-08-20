@@ -58,7 +58,7 @@ export function ProfileCard({
       />
      </div>
      <div className="inline-flex items-center bg-coffee h-[24px] rounded">
-      <span className="text-caption text-aqua dark:text-white opacity-75 px-[10px]">
+      <span className="text-caption truncate text-aqua dark:text-white opacity-75 px-[10px]">
        {role || "n/a"}
       </span>
      </div>
