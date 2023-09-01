@@ -1,3 +1,4 @@
+export {}
 /*
   This script generates a Markdown template for the "Techbropedia" project with provided details.
 
