@@ -249,13 +249,13 @@ export default function Landing(props: { contents: any }) {
             </div>
            </div>
            <Tab.Group>
-            <Tab.List className="flex space-x-1 rounded-xl bg-blue-900/20 p-1">
+            <Tab.List className="flex items-start space-x-1 rounded-xl bg-blue-900/20 p-1 overflow-x-auto w-full">
              {tabs.map((tab) => (
               <Tab
                key={slugify(tab)}
                className={({ selected }) =>
                 classNames(
-                 "w-full rounded-lg py-3 text-body-sm md:text-body-lg",
+                 "w-full rounded-lg px-3 md:px-0 py-3 text-[14px] md:text-body-lg whitespace-nowrap",
                  "ring-aqua ring-opacity-60 ring-offset-1 focus:outline-none focus:ring-1",
                  selected
                   ? "bg-secondary-200 shadow text-white"
