@@ -20,10 +20,12 @@ cd techbropedia
 #### Install dependencies
 
 ```bash
-npm install #or
+npm install
 
-yarn install #or if you use pnpm
+# yarn
+yarn install
 
+#or if you use pnpm
 pnpm install
 ```
 
