@@ -10,4 +10,6 @@ occupation:
 companies:
   - SheCode Africa
 brief: <section class='section'><p>Ada is the Founder of She Code Africa (SCA), a non-profit organisation focused on empowering young girls and women in Africa through technical skills.</p></section>
+contributions:
+- Empowering young women in Africa through her non-profit organisation, <a href='https://shecodeafrica.org/'>She Code Africa.</a>
 ---
