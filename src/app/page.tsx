@@ -2,31 +2,44 @@ import fs from "fs";
 import matter from "gray-matter";
 import Landing from "../components/landing";
 
+type FileData = {
+ slug: string;
+ data: Record<string, any>;
+ content: string;
+};
+
 const getUsers = async () => {
  // Getting all our contents at build time
 
- // Get all the contents from contents folder
- const files = fs.readdirSync(`src/contents`);
+ // Get all the contents from the contents folder
+ const files = fs.readdirSync("src/contents");
 
- // Randomly shuffle the files array
- files.sort(() => Math.random() - 0.5);
+ // Separate the files into two arrays: one for 'techbro_sis' and one for the rest
+ const dummyFiles: FileData[] = [];
+ const techbro_sisFiles: FileData[] = [];
 
- // Loop over each post to extract the frontmatter which we need
- const contents = files.map((file) => {
-  // getting the slug here which we will need as a URL query parameter
+ const techbroSisRegex = /^techbro_sis\d+/; // Regular expression to match 'techbro_sis' followed by any number
+
+ files.forEach((file) => {
   const slug = file.replace(".md", "");
-  // Reading the contents of the file
   const filecontent = fs.readFileSync(`src/contents/${file}`, "utf-8");
   const parsedContent = matter(filecontent);
-  //The parsed content contains data and content we only need the data which is the frontmatter
   const { data, content } = parsedContent;
-  return {
-   slug,
-   data,
-   content
-  };
+
+  if (techbroSisRegex.test(slug)) {
+   dummyFiles.push({ slug, data, content });
+  } else {
+   techbro_sisFiles.push({ slug, data, content });
+  }
  });
- return { contents };
+
+ // Randomly shuffle the otherFiles array
+ techbro_sisFiles.sort(() => Math.random() - 0.5);
+
+ // Combine techbroSisFiles and shuffled otherFiles
+ const allContents = [...techbro_sisFiles, ...dummyFiles];
+
+ return { contents: allContents };
 };
 
 const Home = async () => {
