@@ -15,14 +15,7 @@ If you are interested in contributing to Techbropedia, please follow these steps
 
 ### Guidelines for Techbro.md Format
 
-All Techbro/Techsis stories should follow the techbro.md format, which includes the following sections:
-    Title
-    Author Name
-    Author Bio (optional)
-    Introduction
-    Background
-    Current Work and Projects
-    Contributions to the Tech Community
+All Techbro/Techsis stories should follow the techbro.md format, which includes the following sections: `Title`, `Author Name`, `Author Bio(optional)`, `Introduction`, `Background`, `Current Work and Projects`, `Contributions to the Tech Community`
 
 Please see the techbro.md file in the contributing-guidelines directory for a more detailed explanation of each section.
 Review Process
