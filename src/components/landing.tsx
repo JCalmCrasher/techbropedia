@@ -28,6 +28,7 @@ type UserProfile = {
   github: string | undefined;
   dp: string;
   occupation: string[];
+  contributions?: string[];
  };
 };
 
@@ -78,7 +79,8 @@ export default function Landing(props: { contents: any }) {
   setIsOpen(true);
  }
 
- const tabs = ["Background", "Works", "Fun Stuff", "Gallery"];
+ const tabs = ["Background", "Contributions", "Fun Stuff", "Gallery"];
+ const contributions = selectedProfile.data?.contributions || [];
 
  const aboutSectionRef = useRef<HTMLElement | null>(null);
 
@@ -268,14 +270,23 @@ export default function Landing(props: { contents: any }) {
              ))}
             </Tab.List>
             <Tab.Panels>
-             {/* <Tab.Panel className="panel">{selectedProfile.content}</Tab.Panel> */}
              <Tab.Panel
               className="panel leading-7"
               dangerouslySetInnerHTML={{
                __html: selectedProfile?.content || workInProgress
               }}
              />
-             <Tab.Panel>{workInProgress}</Tab.Panel>
+             <Tab.Panel className="panel">
+              {(contributions?.length > 0 && (
+               <ul className="list-decimal ml-4">
+                {contributions.map((c, i) => (
+                 <li className='leading-7' key={i} dangerouslySetInnerHTML={{ __html: c }} />
+                ))}
+               </ul>
+              )) ||
+               workInProgress}
+             </Tab.Panel>
+
              <Tab.Panel
               dangerouslySetInnerHTML={{
                __html: selectedProfile?.data.funStuff || workInProgress
