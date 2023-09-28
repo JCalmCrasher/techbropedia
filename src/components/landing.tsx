@@ -187,9 +187,9 @@ export default function Landing(props: { contents: any }) {
        {profiles?.map((profile: UserProfile) => (
         <ProfileCard
          key={key()}
-         name={profile.data.name}
+         name={profile.data?.name}
          role={profile.data?.occupation[0] || "N/A"}
-         about={profile.data.brief || "N/A"}
+         about={profile.data.brief}
          linkedin={profile.data.linkedin}
          twitter={profile.data.twitter}
          website={profile.data.website}
@@ -252,7 +252,7 @@ export default function Landing(props: { contents: any }) {
             <Tab.List className="flex items-start space-x-1 rounded-xl bg-blue-900/20 p-1 overflow-x-auto w-full">
              {tabs.map((tab) => (
               <Tab
-               key={slugify(tab)}
+               key={slugify(tab || "")}
                className={({ selected }) =>
                 classNames(
                  "w-full rounded-lg px-3 md:px-0 py-3 text-[14px] md:text-body-lg whitespace-nowrap",
