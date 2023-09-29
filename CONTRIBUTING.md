@@ -20,6 +20,6 @@ All Techbro/Techsis stories should follow the techbro.md format, which includes 
 Please see the techbro.md file in the contributing-guidelines directory for a more detailed explanation of each section.
 Review Process
 
-Once you submit a PR, it will be reviewed by our team of editors. We may provide feedback or suggest changes to your article to ensure that it meets our editorial standards and aligns with our goal of highlighting the diversity of experiences in the Nigerian tech industry.
+Once you submit a PR, it will be reviewed. We may provide feedback or suggest changes to your article to ensure that it meets our editorial standards and aligns with our goal of highlighting the diversity of experiences in the Nigerian tech industry.
 
 Once your article is approved, it will be published on the Techbropedia website with proper attribution to you as the author.
