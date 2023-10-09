@@ -1,12 +1,7 @@
 import fs from "fs";
 import matter from "gray-matter";
 import Landing from "../components/landing";
-
-type FileData = {
- slug: string;
- data: Record<string, any>;
- content: string;
-};
+import type { MarkdownContent } from "@/types";
 
 const getUsers = async () => {
  // Getting all our contents at build time
@@ -15,8 +10,8 @@ const getUsers = async () => {
  const files = fs.readdirSync("src/contents");
 
  // Separate the files into two arrays: one for 'techbro_sis' and one for the rest
- const dummyFiles: FileData[] = [];
- const techbro_sisFiles: FileData[] = [];
+ const dummyFiles: MarkdownContent[] = [];
+ const techbro_sisFiles: MarkdownContent[] = [];
 
  const techbroSisRegex = /^techbro_sis\d+/; // Regular expression to match 'techbro_sis' followed by any number
 
