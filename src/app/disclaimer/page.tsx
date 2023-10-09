@@ -10,6 +10,10 @@ const references = [
  {
   name: "LinkedIn",
   link: "https://www.linkedin.com"
+ },
+ {
+  name: "Crunchbase",
+  link: "https://www.crunchbase.com"
  }
 ];
 
