@@ -1,6 +1,6 @@
 ---
 name: Prosper Otemuyiwa
-gender: Male
+sex: Male
 linkedin: https://www.linkedin.com/in/prosperotemuyiwa/
 twitter: https://twitter.com/unicodeveloper
 github: https://github.com/unicodeveloper/

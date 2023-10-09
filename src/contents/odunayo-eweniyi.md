@@ -1,6 +1,6 @@
 ---
 name: Odunayo Eweniyi
-gender: Female
+sex: Female
 linkedin: https://www.linkedin.com/in/odunayoeweniyi/
 twitter: https://twitter.com/oduneweniyi
 website: https://odun.disha.page
@@ -14,8 +14,8 @@ companies:
  - Endeavor
 brief: <section class='section'><p>Odunayo Eweniyi is a Nigerian business executive and activist. She is the Co-founder and Chief Operations Officer of PiggyVest.</p><p>She is also a co-founder of Feminist Coalition. Eweniyi graduated from Covenant University in 2013 with a first-class degree in Computer Engineering.</p></section>
 contributions:
-- Co-founded <a href='https://piggyvest.com/'>PiggyVest</a>, a fintech company that helps users save and invest money.
-- Co-founded <a href='https://feministcoalition2020.com/'>Feminist Coalition</a>, a group with a mission at to champion equality for women in Nigerian society.
+ - Co-founded <a href='https://piggyvest.com/'>PiggyVest</a>, a fintech company that helps users save and invest money.
+ - Co-founded <a href='https://feministcoalition2020.com/'>Feminist Coalition</a>, a group with a mission at to champion equality for women in Nigerian society.
 ---
 
 <section class='section'>

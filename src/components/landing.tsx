@@ -174,7 +174,7 @@ export default function Landing(props: { contents: any }) {
     }}
    >
     <Container>
-     <div className="flex justify-between">
+     <div className="flex justify-between flex-col md:flex-row">
       <h2 className="text-headline-sm sm:text-headline-md">
        Techbros & Techsis
       </h2>
@@ -191,7 +191,7 @@ export default function Landing(props: { contents: any }) {
         id="options"
         className="h-[56px] p-[10px] bg-white text-primary-main dark:text-primary-main rounded-lg border-2 focus:border-secondary-main"
        >
-        <option value="male">Gender</option>
+        <option value="male">sex</option>
         <option value="female">Job role</option>
        </select>
       </div>
@@ -199,23 +199,25 @@ export default function Landing(props: { contents: any }) {
 
      <div className="mt-10">
       <div className="grid gap-x-4 grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 gap-y-6">
-       {filteredProfiles?.map((profile: UserProfile) => (
-        <ProfileCard
-         key={key()}
-         name={profile.data?.name}
-         role={profile.data?.occupation[0] || "N/A"}
-         about={profile.data.brief}
-         linkedin={profile.data.linkedin}
-         twitter={profile.data.twitter}
-         website={profile.data.website}
-         github={profile.data.github}
-         image={profile.data.dp}
-         onInfo={() => {
-          setSelectedProfile(profile);
-          openModal();
-         }}
-        />
-       ))}
+       {filteredProfiles?.length > 0
+        ? filteredProfiles?.map((profile: UserProfile) => (
+           <ProfileCard
+            key={key()}
+            name={profile.data?.name}
+            role={profile.data?.occupation[0] || "N/A"}
+            about={profile.data.brief}
+            linkedin={profile.data.linkedin}
+            twitter={profile.data.twitter}
+            website={profile.data.website}
+            github={profile.data.github}
+            image={profile.data.dp}
+            onInfo={() => {
+             setSelectedProfile(profile);
+             openModal();
+            }}
+           />
+          ))
+        : "No profile match this query"}
       </div>
      </div>
     </Container>

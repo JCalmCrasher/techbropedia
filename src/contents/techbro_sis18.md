@@ -1,6 +1,6 @@
 ---
 name:
-gender: Male
+sex: Male
 linkedin: https://www.linkedin.com/
 twitter: https://twitter.com/
 github: https://github.com

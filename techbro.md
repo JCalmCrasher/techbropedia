@@ -1,6 +1,6 @@
 ---
 name:
-gender: Male
+sex: Male
 linkedin: https://www.linkedin.com/in/lorem-ipsum
 twitter: https://twitter.com/lorem-ipsum
 github: https://github.com/lorem-ipsum

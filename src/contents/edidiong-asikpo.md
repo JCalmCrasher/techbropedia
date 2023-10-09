@@ -1,6 +1,6 @@
 ---
 name: Edidiong Asikpo
-gender: Femaile
+sex: Female
 linkedin:
 twitter: https://twitter.com/Didicodes
 github: https://github.com/didicodes

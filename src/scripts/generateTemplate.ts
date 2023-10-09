@@ -1,4 +1,4 @@
-export {}
+export {};
 /*
   This script generates a Markdown template for the "Techbropedia" project with provided details.
 
@@ -13,7 +13,7 @@ export {}
 */
 type Question = {
  name: string;
- gender: string;
+ sex: string;
  linkedin: string;
  twitter: string;
  github: string;
@@ -25,7 +25,7 @@ type Question = {
 };
 const template = `---
 name: {{name}}
-gender: {{gender}}
+sex: {{sex}}
 linkedin: {{linkedin}}
 twitter: {{twitter}}
 github: {{github}}
@@ -41,7 +41,7 @@ const data: Question = {
  brief: "",
  companies: [],
  dp: "",
- gender: "",
+ sex: "",
  github: "",
  linkedin: "",
  name: "",
@@ -55,7 +55,7 @@ function generateTemplate() {
  const readline = require("readline-sync");
 
  data.name = readline.question("Name: ");
- data.gender = readline.question("Gender: ");
+ data.sex = readline.question("sex: ");
  data.linkedin = readline.question("LinkedIn: ");
  data.twitter = readline.question("Twitter: ");
  data.github = readline.question("GitHub: ");

@@ -1,6 +1,6 @@
 ---
 name: Shedrack Akintayo
-gender: Male
+sex: Male
 linkedin: https://www.linkedin.com/in/shedrackakintayo
 twitter: https://twitter.com/coder_blvck
 github: https://github.com/hacktivist123

@@ -1,12 +1,12 @@
 ---
 name: Ire Aderinokun
-gender: Female
+sex: Female
 linkedin: https://www.linkedin.com/in/iaderinokun
 twitter: https://twitter.com/ireaderinokun
 github: https://github.com/ireade
 dp: https://upload.wikimedia.org/wikipedia/commons/d/d3/Ire_Aderinokun.png
 occupation:
- - Frontend Engineer 
+ - Frontend Engineer
 companies:
  - Stand to End Rape (STER) Initiative
  - Self-employed

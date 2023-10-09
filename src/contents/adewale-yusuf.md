@@ -1,6 +1,6 @@
 ---
 name: Adewale Yusuf
-gender: Male
+sex: Male
 linkedin: https://www.linkedin.com/in/adewaleyusuf/
 twitter: https://twitter.com/AdewaleYusuf_
 website: https://altschoolafrica.com/
@@ -13,9 +13,9 @@ companies:
  - TalentQL
 brief: <section class='section'><p>Adewale Yusuf is a pioneer in the African tech ecosystem.</p><p>As the co-founder and CEO of AltSchool Africa, a skill-to-market platform, Adewale is helping to revolutionize the way people learn and work in the digital age.</p></section>
 contributions:
-- Founded <a href='https://altschoolafrica.com/'>AltSchool Africa</a>, an innovative education platform that offers personalized learning experiences for over 4,000+ from 17 countries.
-- Co-founded <a href="https://talentql.com/">TalentQL</a>, a talent sourcing and management company that connects African talent with global opportunities.
-- Co-founded Techpoint Africa, a media company that covers technology, business, and culture in Africa.
+ - Founded <a href='https://altschoolafrica.com/'>AltSchool Africa</a>, an innovative education platform that offers personalized learning experiences for over 4,000+ from 17 countries.
+ - Co-founded <a href="https://talentql.com/">TalentQL</a>, a talent sourcing and management company that connects African talent with global opportunities.
+ - Co-founded Techpoint Africa, a media company that covers technology, business, and culture in Africa.
 ---
 
 <section class='section'>

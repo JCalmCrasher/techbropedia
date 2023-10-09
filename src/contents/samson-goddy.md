@@ -1,6 +1,6 @@
 ---
 name: Samson Goddy
-gender: Male
+sex: Male
 linkedin: https://www.linkedin.com/in/samsongoddy/
 twitter: https://twitter.com/samson_goddy
 github: https://github.com/samswag

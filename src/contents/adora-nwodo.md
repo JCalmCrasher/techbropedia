@@ -1,6 +1,6 @@
 ---
 name: Adora Nwodo
-gender: Female
+sex: Female
 linkedin: https://www.linkedin.com/in/adoranwodo
 twitter: https://twitter.com/adoranwodo
 website: https://adoranwodo.com
