@@ -8,13 +8,13 @@ import { faClose } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Dialog, Tab, Transition } from "@headlessui/react";
 import { ArrowDownIcon } from "@heroicons/react/20/solid";
-import Head from "next/head";
+import { Metadata } from "next";
 import { Fragment, useEffect, useRef, useState } from "react";
 import { useMediaQuery, useReadLocalStorage } from "usehooks-ts";
 import { v4 as key } from "uuid";
-import { ProfileCard } from "./card/ProfileCard";
 import colors from "../theme";
-import { Metadata } from "next";
+import { ProfileCard } from "./card/ProfileCard";
+import SearchInput from "./search-input";
 
 type UserProfile = {
  content: string | undefined;
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
 const workInProgress = "Working on this section, check back for updates!";
 
 export default function Landing(props: { contents: any }) {
- const { contents: profiles } = props;
+ const { contents: profiles }: { contents: UserProfile[] } = props;
  const [selectedProfile, setSelectedProfile] = useState<UserProfile>({
   content: "",
   data: {
@@ -56,6 +56,9 @@ export default function Landing(props: { contents: any }) {
    occupation: []
   }
  });
+
+ const [searchQuery, setSearchQuery] = useState("");
+ const [filteredProfiles, setFilteredProfiles] = useState(profiles);
 
  const isDarkMode = useReadLocalStorage("darkTheme");
 
@@ -81,6 +84,13 @@ export default function Landing(props: { contents: any }) {
 
  const tabs = ["Background", "Contributions", "Fun Stuff", "Gallery"];
  const contributions = selectedProfile.data?.contributions || [];
+
+ useEffect(() => {
+  const filtered = profiles.filter((profile) =>
+   profile.data?.name?.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+  setFilteredProfiles(filtered);
+ }, [searchQuery, profiles]);
 
  const aboutSectionRef = useRef<HTMLElement | null>(null);
 
@@ -164,29 +174,32 @@ export default function Landing(props: { contents: any }) {
     }}
    >
     <Container>
-     <h2 className="text-headline-sm sm:text-headline-md">
-      Techbros & Techsis
-     </h2>
+     <div className="flex justify-between">
+      <h2 className="text-headline-sm sm:text-headline-md">
+       Techbros & Techsis
+      </h2>
+
+      <SearchInput setSearchQuery={setSearchQuery} />
+     </div>
      {/* <div className="flex flex-col tablet:flex-row gap-5">
-            <SearchInput />
-            <div className="flex items-center gap-3">
-              <label htmlFor="filter" className="whitespace-nowrap">
-                Filter by
-              </label>
-              <select
-                name="filter_option"
-                id="options"
-                className="h-[56px] p-[10px] bg-white text-primary-main dark:text-primary-main rounded-lg border-2 focus:border-secondary-main"
-              >
-                <option value="male">Gender</option>
-                <option value="female">Job role</option>
-              </select>
-            </div>
-          </div> */}
+      <div className="flex items-center gap-3">
+       <label htmlFor="filter" className="whitespace-nowrap">
+        Filter by
+       </label>
+       <select
+        name="filter_option"
+        id="options"
+        className="h-[56px] p-[10px] bg-white text-primary-main dark:text-primary-main rounded-lg border-2 focus:border-secondary-main"
+       >
+        <option value="male">Gender</option>
+        <option value="female">Job role</option>
+       </select>
+      </div>
+     </div> */}
 
      <div className="mt-10">
       <div className="grid gap-x-4 grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 gap-y-6">
-       {profiles?.map((profile: UserProfile) => (
+       {filteredProfiles?.map((profile: UserProfile) => (
         <ProfileCard
          key={key()}
          name={profile.data?.name}
@@ -280,7 +293,11 @@ export default function Landing(props: { contents: any }) {
               {(contributions?.length > 0 && (
                <ul className="list-decimal ml-4">
                 {contributions.map((c, i) => (
-                 <li className='leading-7' key={i} dangerouslySetInnerHTML={{ __html: c }} />
+                 <li
+                  className="leading-7"
+                  key={i}
+                  dangerouslySetInnerHTML={{ __html: c }}
+                 />
                 ))}
                </ul>
               )) ||
