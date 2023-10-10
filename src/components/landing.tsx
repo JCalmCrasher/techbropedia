@@ -116,7 +116,6 @@ export default function Landing(props: { contents: any }) {
         alt="memojis of techbros & techsis smiling"
         width={354}
         height={354}
-        style={{ width: "auto" }}
        />
       </div>
      </div>
