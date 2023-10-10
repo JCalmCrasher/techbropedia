@@ -82,7 +82,7 @@ export default function Landing(props: { contents: any }) {
   setIsOpen(true);
  }
 
- const tabs = ["Background", "Contributions", "Fun Stuff", "Gallery"];
+ const tabs = ["About", "Contributions", "Fun Stuff", "Gallery"];
  const contributions = selectedProfile.data?.contributions || [];
 
  useEffect(() => {
@@ -200,7 +200,7 @@ export default function Landing(props: { contents: any }) {
      <div className="mt-10">
       <div className="grid gap-x-4 grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 gap-y-6">
        {filteredProfiles?.length > 0
-        ? filteredProfiles?.map((profile: UserProfile) => (
+        ? filteredProfiles?.map((profile) => (
            <ProfileCard
             key={key()}
             name={profile.data?.name}
