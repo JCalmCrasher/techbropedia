@@ -36,16 +36,12 @@ export function ProfileCard({
 }: ProfileCardProps) {
  const hasAbout = about?.length > 0;
 
- const handleProfileClick = (
-  e: MouseEvent<HTMLAnchorElement, globalThis.MouseEvent>
- ) => {
-  e.preventDefault();
- };
-
  return (
   <>
    {hasAbout ? (
-    <Link href={`#${slugify(name || "")}`} onClick={handleProfileClick}>
+    <Link
+     href={name ? `/profile/${slugify(name)}` : "#"}
+    >
      <div className="border-2 border-primary-main dark:border-secondary-100 p-4 rounded-lg dark:bg-primary-100 transition-colors duration-300 hover:border-secondary-100 dark:hover:border-secondary-main h-[full] sm:max-h-[430px]">
       <div className="flex flex-col tablet:flex-row justify-between items-start">
        <div className="w-[144px] h-[126px]">
@@ -71,13 +67,13 @@ export function ProfileCard({
        <div className="flex justify-between">
         <div className="flex items-center gap-2">
          <p className="text-title-sm font-medium">{name}</p>
-         <Link href="#info" onClick={onInfo}>
+         {/* <Link href="#info" onClick={onInfo}>
           <FontAwesomeIcon
            className="text-secondary-100 hover:text-secondary-main"
            icon={faInfoCircle}
            onClick={(e) => e.preventDefault()}
           />
-         </Link>
+         </Link> */}
         </div>
        </div>
        <div

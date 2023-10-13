@@ -11,3 +11,14 @@ export const slugify = (text: string) => {
 export const classNames = (...classes: string[]) => {
   return classes.filter(Boolean).join(" ");
 };
+
+export const unSlugify = (text: string) => {
+  return text
+    .toString()
+    .toLowerCase()
+    .trim()
+    .replace(/[\s_]+/g, " ")
+    .replace(/[^\w-]+/g, "")
+    .replace(/-+/g, " ")
+    .replace(/--+/g, " ");
+}
