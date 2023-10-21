@@ -32,10 +32,12 @@ pnpm install
 #### Start the development server
 
 ```bash
-npm run dev #or
+npm run dev
 
-yarn dev #or if you use pnpm
+#or
+yarn dev
 
+#or if you use pnpm
 pnpm dev
 ```
 
