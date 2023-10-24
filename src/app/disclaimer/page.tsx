@@ -19,7 +19,7 @@ const references = [
 
 const DisclaimerPage = () => {
  return (
-  <article className="px-x-sm tablet:px-x-md laptop:px-x-lg font-mono mb-10">
+  <article className="body-layout">
    <h2 className="text-headline-sm font-bold pt-20 md:pt-0">Disclaimer</h2>
    <section className="disclaimer mt-4">
     <p>
@@ -38,10 +38,8 @@ const DisclaimerPage = () => {
     </p>
     <p>
      It&apos;s important to note that the stories published here are not
-     intended to be taken as authoritative or superior sources of information.
-     They are personal accounts and paths of the individuals involved. Readers
-     are encouraged to seek additional information and diverse viewpoints to
-     form a well-rounded understanding of the topics discussed.
+     intended to be taken as authoritative or superior sources of information. Readers are encouraged to seek additional information and diverse viewpoints to
+     form a well-rounded understanding of the stories shared on this platform.
     </p>
     <p>
      Techbropedia is dedicated to fostering inclusivity, sharing experiences,
@@ -57,7 +55,7 @@ const DisclaimerPage = () => {
      .
     </p>
     <p className="italic">
-     Some of the content on this site may contain links to external websites.
+     <span className="font-bold">Note: </span>Contents on this site are sourced from different sites and are not the original work of the author of this site. Some contents were also rewritten by ChatGPT.
     </p>
     <div className="mt-10">
      <h3 className="text-title-lg font-bold pt-20 md:pt-0 mb-3">References</h3>

@@ -51,3 +51,7 @@ section.disclaimer p:not(:first-of-type) {
 .panel a {
  @apply text-blue-500;
 }
+
+.body-layout {
+ @apply px-x-sm tablet:px-x-md laptop:px-x-lg font-mono mb-10;
+}
