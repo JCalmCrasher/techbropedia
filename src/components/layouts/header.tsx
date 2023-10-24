@@ -34,6 +34,7 @@ export default function TheHeader() {
             <div className="gap-5 hidden tablet:flex">
               <NavLink href="/#about">About</NavLink>
               <NavLink href="/#techbros_techsis">Tech Bro</NavLink>
+              <NavLink href="/roadmap">Roadmap</NavLink>
             </div>
 
             <DarkModeSwitcher
