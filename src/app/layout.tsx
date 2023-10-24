@@ -11,7 +11,7 @@ config.autoAddCss = false;
 
 export const metadata: Metadata = {
  title: "Techbropedia",
- description: "The Wikipedia for Techbros & Techsis in Nigeria"
+ description: "The Wikipedia for Techbros & Techsis in the World"
 };
 
 export default function RootLayout({

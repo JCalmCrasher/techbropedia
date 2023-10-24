@@ -24,7 +24,7 @@ const DisclaimerPage = () => {
    <section className="disclaimer mt-4">
     <p>
      Techbropedia is committed to documenting the diverse stories and
-     experiences of individuals within the Nigeria tech industry. The stories
+     experiences of individuals within the tech space. The stories
      and experiences shared on this platform belong to the respective
      individuals and do not necessarily reflect the views of Techbropedia.
     </p>

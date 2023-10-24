@@ -35,7 +35,7 @@ type UserProfile = {
 export const metadata: Metadata = {
  // metadataBase: new URL(env.NEXT_PUBLIC_APP_URL),
  title: "Techbropedia",
- description: "Wikipedia for Techbros & Techsis in Nigeria"
+ description: "Wikipedia for Techbros & Techsis in the World"
 };
 
 const workInProgress = "Working on this section, check back for updates!";
@@ -105,7 +105,7 @@ export default function Landing(props: { contents: any }) {
      <div className="flex items-center flex-col min-h-[483px] laptop:flex-row gap-12 laptop:gap-0 laptop:justify-between oudtline 2xl:max-w-7xl 2xl:mx-auto">
       <div className="flex flex-col gap-3">
        <h1 className="text-headline-sm tablet:text-headline-md laptop:text-headline-lg font-bold tablet:max-w-full laptop:max-w-[500px]">
-        The <span>Wikipedia</span> for Techbros & Techsis in Nigeria
+        The <span>Wikipedia</span> for Techbros & Techsis in the World
        </h1>
        <p className="text-caption">Know your techbros and techsis</p>
       </div>
@@ -150,7 +150,7 @@ export default function Landing(props: { contents: any }) {
       <div className="flex flex-col gap-4 mt-4 max-w-4xl">
        <p className="text-body-lg">
         The idea behind Techbropedia is to create a platform dedicated to
-        documenting the stories of individuals in the Nigeria tech industry. The
+        documenting the stories of individuals in the tech industry. The
         goal is to highlight the diverse backgrounds and experiences of people
         working in technology, from their education and early career choices to
         their current projects and contributions to the field.

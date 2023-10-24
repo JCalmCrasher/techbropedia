@@ -1,6 +1,6 @@
 # Techbropedia
 
-The idea behind Techbropedia is to create a platform dedicated to documenting the stories of individuals in the Nigeria tech industry. The goal is to highlight the diverse backgrounds and experiences of people working in technology, from their education and early career choices to their current projects and contributions to the field.
+The idea behind Techbropedia is to document the stories of individuals in the tech ecosystem. The goal is to highlight the diverse backgrounds and experiences of people working in technology, from their education and early career choices to their current projects and contributions to the field.
 
 By sharing these stories, we hope to inspire others to pursue careers in tech and to showcase the many different paths that can lead to success in this dynamic and ever-changing industry.
 

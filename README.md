@@ -1,6 +1,6 @@
 ## Techbropedia
 
-Welcome to Techbropedia, a platform dedicated to documenting the stories of individuals in the Nigeria tech industry. Here, we highlight the diverse backgrounds and experiences of people working in technology, from their education and early career choices to their current projects and contributions to the field.
+Welcome to Techbropedia, a platform dedicated to documenting the stories of individuals in the tech industry. Here, we highlight the diverse backgrounds and experiences of people working in technology, from their education and early career choices to their current projects and contributions to the field.
 
 ### Getting Started
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
