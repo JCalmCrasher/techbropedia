@@ -67,13 +67,13 @@ export function ProfileCard({
        <div className="flex justify-between">
         <div className="flex items-center gap-2">
          <p className="text-title-sm font-medium">{name}</p>
-         {/* <Link href="#info" onClick={onInfo}>
+         <Link href="#info" onClick={onInfo}>
           <FontAwesomeIcon
            className="text-secondary-100 hover:text-secondary-main"
            icon={faInfoCircle}
            onClick={(e) => e.preventDefault()}
           />
-         </Link> */}
+         </Link>
         </div>
        </div>
        <div
