@@ -82,7 +82,7 @@ export default function Landing(props: { contents: any }) {
   setIsOpen(true);
  }
 
- const tabs = ["About", "Contributions", "Fun Stuff", "Gallery"];
+ const tabs = ["About", "Notable Contributions", "Fun Stuff", "Gallery"];
  const contributions = selectedProfile.data?.contributions || [];
 
  useEffect(() => {
@@ -271,7 +271,7 @@ export default function Landing(props: { contents: any }) {
                key={slugify(tab || "")}
                className={({ selected }) =>
                 classNames(
-                 "w-full rounded-lg px-3 md:px-0 py-3 text-[14px] md:text-body-lg whitespace-nowrap",
+                 "w-full rounded-lg px-3 md:px-0 py-3 text-[14px] md:text-body-sm whitespace-nowrap",
                  "ring-aqua ring-opacity-60 ring-offset-1 focus:outline-none focus:ring-1",
                  selected
                   ? "bg-secondary-200 shadow text-white"
