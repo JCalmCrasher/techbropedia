@@ -55,7 +55,7 @@ const DisclaimerPage = () => {
      .
     </p>
     <p className="italic">
-     <span className="font-bold">Note: </span>Contents on this site are sourced from different sites and are not the original work of the author of this site. Some contents were also rewritten by ChatGPT.
+     <span className="font-bold">Note: </span>Contents on this site are sourced from different sites and are not the original work of the author of this site.
     </p>
     <div className="mt-10">
      <h3 className="text-title-lg font-bold pt-20 md:pt-0 mb-3">References</h3>
