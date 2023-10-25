@@ -170,7 +170,7 @@ export default function Landing(props: { contents: any }) {
       </h2>
       <div className="flex flex-col gap-4 mt-4 max-w-4xl">
        <p className="text-body-lg">
-        The idea behind Techbropedia is to create a platform dedicated to
+        The idea behind Techbropedia is to have a platform dedicated to
         documenting the stories of individuals in the tech industry. The goal is
         to highlight the diverse backgrounds and experiences of people working
         in technology, from their education and early career choices to their
