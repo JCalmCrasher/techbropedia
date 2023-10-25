@@ -2,20 +2,20 @@ import Container from "@/components/container";
 import Link from "next/link";
 import React from "react";
 
-const references = [
- {
-  name: "Wikipedia",
-  link: "https://www.wikipedia.com"
- },
- {
-  name: "LinkedIn",
-  link: "https://www.linkedin.com"
- },
- {
-  name: "Crunchbase",
-  link: "https://www.crunchbase.com"
- }
-];
+// const references = [
+//  {
+//   name: "Wikipedia",
+//   link: "https://www.wikipedia.com"
+//  },
+//  {
+//   name: "LinkedIn",
+//   link: "https://www.linkedin.com"
+//  },
+//  {
+//   name: "Crunchbase",
+//   link: "https://www.crunchbase.com"
+//  }
+// ];
 
 const DisclaimerPage = () => {
  return (
@@ -57,18 +57,6 @@ const DisclaimerPage = () => {
     <p className="italic">
      <span className="font-bold">Note: </span>Contents on this site are sourced from different sites and are not the original work of the author of this site.
     </p>
-    <div className="mt-10">
-     <h3 className="text-title-lg font-bold pt-20 md:pt-0 mb-3">References</h3>
-     <ul className="list-decimal ml-8">
-      {references.map((reference) => (
-       <li key={reference.name}>
-        <a href={reference.link} target="_blank" rel="noreferrer">
-         {reference.name}
-        </a>
-       </li>
-      ))}
-     </ul>
-    </div>
    </section>
   </article>
  );
