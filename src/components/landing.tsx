@@ -81,8 +81,29 @@ export default function Landing(props: { contents: any }) {
  function openModal() {
   setIsOpen(true);
  }
-
- const tabs = ["About", "Notable Contributions", "Fun Stuff", "Gallery"];
+ //  "About",
+ //  "Notable Contributions/Projects",
+ //  "Fun Stuff",
+ //  "Gallery"
+ // create a object of the above tab {value:<value>, title: <title>}
+ const tabs = [
+  {
+   value: "about",
+   title: "About"
+  },
+  {
+   value: "notable contributions/projects",
+   title: "Contributions"
+  },
+  {
+   value: "funStuff",
+   title: "Fun Stuff"
+  },
+  {
+   value: "gallery",
+   title: "Gallery"
+  }
+ ];
  const contributions = selectedProfile.data?.contributions || [];
 
  useEffect(() => {
@@ -150,10 +171,10 @@ export default function Landing(props: { contents: any }) {
       <div className="flex flex-col gap-4 mt-4 max-w-4xl">
        <p className="text-body-lg">
         The idea behind Techbropedia is to create a platform dedicated to
-        documenting the stories of individuals in the tech industry. The
-        goal is to highlight the diverse backgrounds and experiences of people
-        working in technology, from their education and early career choices to
-        their current projects and contributions to the field.
+        documenting the stories of individuals in the tech industry. The goal is
+        to highlight the diverse backgrounds and experiences of people working
+        in technology, from their education and early career choices to their
+        current projects and contributions to the field.
        </p>
 
        <p className="text-body-lg">
@@ -239,7 +260,7 @@ export default function Landing(props: { contents: any }) {
          <Dialog.Panel className="w-full max-w-3xl transform overflow-hidden rounded-2xl bg-white dark:bg-primary-200 dark:text-white p-6 text-left align-middle shadow-xl transition-all">
           <Dialog.Title
            as="h3"
-           className="flex justify-between text-lg font-medium leading-6 text-gray-900"
+           className="flex justify-between text-lg font-medium leading-6 text-gray-900 dark:text-white"
           >
            {selectedProfile.data.name}
            <FontAwesomeIcon
@@ -265,13 +286,14 @@ export default function Landing(props: { contents: any }) {
             </div>
            </div>
            <Tab.Group>
-            <Tab.List className="flex items-start space-x-1 rounded-xl bg-blue-900/20 p-1 overflow-x-auto w-full">
+            <Tab.List className="flex items-stretch space-x-1 rounded-xl bg-blue-900/20 p-1 overflow-x-auto w-full">
              {tabs.map((tab) => (
               <Tab
-               key={slugify(tab || "")}
+               title={tab.value}
+               key={slugify(tab.value || "")}
                className={({ selected }) =>
                 classNames(
-                 "w-full rounded-lg px-3 md:px-0 py-3 text-[14px] md:text-body-sm whitespace-nowrap",
+                 "w-full h-full rounded-lg px-3 md:px-0 py-3 text-[14px] md:text-body-sm md:whitespace-nowrap",
                  "ring-aqua ring-opacity-60 ring-offset-1 focus:outline-none focus:ring-1",
                  selected
                   ? "bg-secondary-200 shadow text-white"
@@ -279,7 +301,7 @@ export default function Landing(props: { contents: any }) {
                 )
                }
               >
-               {tab}
+               {tab.title}
               </Tab>
              ))}
             </Tab.List>
@@ -292,7 +314,7 @@ export default function Landing(props: { contents: any }) {
              />
              <Tab.Panel className="panel">
               {(contributions?.length > 0 && (
-               <ul className="list-decimal ml-4">
+               <ul className="list-disc list-item ml-4">
                 {contributions.map((c, i) => (
                  <li
                   className="leading-7"
