@@ -110,7 +110,10 @@ export function ProfileCard({
          >
           <FontAwesomeIcon icon={faGithub} />
          </a>
+        )}
+        {website && (
          <a
+          href={website || "/"}
           target="_blank"
           rel="noreferrer"
           onClick={(e) => e.stopPropagation()}
