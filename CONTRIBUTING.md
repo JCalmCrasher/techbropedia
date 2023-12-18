@@ -5,7 +5,7 @@ Thank you for considering contributing to Techbropedia! We welcome contributions
 ### How to Contribute
 If you are interested in contributing to Techbropedia, please follow these steps:
 
-- Check out the existing Techbro/Techsis stories on the website to get an idea of the format and style of the articles. We use the `techbro.md` format for all articles, which you can find in the contributing-guidelines directory.
+- Check out the existing Techbro/Techsis stories on the website to get an idea of the format and style of the articles. We use the [`techbro.md`](techbro.md) format for all articles, which you can find in the contributing-guidelines directory.
 
 - Choose a Techbro or Techsis whose story you want to tell (_every stories will be reviewed_). We encourage you to highlight individuals who have made substantial contributions to the tech ecosystem, but all stories are welcome.
 
