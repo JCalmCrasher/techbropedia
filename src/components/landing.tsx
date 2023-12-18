@@ -199,23 +199,23 @@ export default function Landing(props: { contents: any }) {
        Techbros & Techsis
       </h2>
 
-      <SearchInput setSearchQuery={setSearchQuery} />
-     </div>
-     {/* <div className="flex flex-col tablet:flex-row gap-5">
-      <div className="flex items-center gap-3">
-       <label htmlFor="filter" className="whitespace-nowrap">
-        Filter by
-       </label>
-       <select
-        name="filter_option"
-        id="options"
-        className="h-[56px] p-[10px] bg-white text-primary-main dark:text-primary-main rounded-lg border-2 focus:border-secondary-main"
-       >
-        <option value="male">sex</option>
-        <option value="female">Job role</option>
-       </select>
+      <div className="flex gap-3">
+       <SearchInput setSearchQuery={setSearchQuery} />
+       <div className="flex flex-col tablet:flex-row gap-5">
+        <div className="flex items-center">
+         <select
+          name="filter_option"
+          id="options"
+          className="h-[56px] p-[10px] bg-white text-primary-main dark:text-primary-main rounded-lg border-2 focus:border-secondary-main"
+         >
+          <option value="">All Countries</option>
+          <option value="nigeria">Nigeria</option>
+          <option value="us">United States</option>
+         </select>
+        </div>
+       </div>
       </div>
-     </div> */}
+     </div>
 
      <div className="mt-10">
       <div className="grid gap-x-4 grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 gap-y-6">
