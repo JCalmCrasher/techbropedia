@@ -21,5 +21,3 @@ Please see the `techbro.md` file in the contributing-guidelines directory for a 
 Review Process
 
 Once you submit a PR, it will be reviewed. We may provide feedback or suggest changes to your article to ensure that it meets our editorial standards and aligns with our goal of highlighting the diversity of experiences in the tech industry.
-
-Once your article is approved, it will be published on the Techbropedia website with proper attribution to you as the author.
