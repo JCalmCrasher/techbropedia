@@ -44,4 +44,5 @@ pnpm dev
 Open [http://localhost:3000](http://localhost:3000) or whatever url that is displayed in your terminal to view the project in your browser.
 
 ### Contributing
+Contributions are highly welcome.
 See [CONTRIBUTING.md](CONTRIBUTING.md) for more information on how to contribute to this project.
