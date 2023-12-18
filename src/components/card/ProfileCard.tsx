@@ -81,6 +81,16 @@ export function ProfileCard({
         }}
        />
        <div className="flex gap-2 justify-end">
+        {linkedin && (
+         <a
+          href={linkedin || "/"}
+          target="_blank"
+          rel="noreferrer"
+          onClick={(e) => e.stopPropagation()}
+         >
+          <FontAwesomeIcon icon={faLinkedin} />
+         </a>
+        )}
         {twitter && (
          <a
           href={twitter || "/"}
