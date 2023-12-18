@@ -39,9 +39,7 @@ export function ProfileCard({
  return (
   <>
    {hasAbout ? (
-    <Link
-     href={name ? `/profile/${slugify(name)}` : "#"}
-    >
+    <Link href={name ? `/profile/${slugify(name)}` : "#"}>
      <div className="border-2 border-primary-main dark:border-secondary-100 p-4 rounded-lg dark:bg-primary-100 transition-colors duration-300 hover:border-secondary-100 dark:hover:border-secondary-main h-[full] sm:max-h-[430px]">
       <div className="flex flex-col tablet:flex-row justify-between items-start">
        <div className="w-[144px] h-[126px]">
@@ -83,23 +81,17 @@ export function ProfileCard({
         }}
        />
        <div className="flex gap-2 justify-end">
-        <a
-         href={linkedin || "/"}
-         target="_blank"
-         rel="noreferrer"
-         onClick={(e) => e.stopPropagation()}
-        >
-         <FontAwesomeIcon icon={faLinkedin} />
-        </a>
-        <a
-         href={twitter || "/"}
-         target="_blank"
-         rel="noreferrer"
-         onClick={(e) => e.stopPropagation()}
-        >
-         <FontAwesomeIcon icon={faTwitter} />
-        </a>
-        {github ? (
+        {twitter && (
+         <a
+          href={twitter || "/"}
+          target="_blank"
+          rel="noreferrer"
+          onClick={(e) => e.stopPropagation()}
+         >
+          <FontAwesomeIcon icon={faTwitter} />
+         </a>
+        )}
+        {github && (
          <a
           href={github || "/"}
           target="_blank"
@@ -108,9 +100,7 @@ export function ProfileCard({
          >
           <FontAwesomeIcon icon={faGithub} />
          </a>
-        ) : (
          <a
-          href={website || twitter || "/"}
           target="_blank"
           rel="noreferrer"
           onClick={(e) => e.stopPropagation()}
